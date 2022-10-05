@@ -106,6 +106,9 @@ $(document).ready(() => {
     el.addClass("open");
   }
 
+  document.querySelector(".open-modal-form").addEventListener("click", openModalForm)
+  document.querySelector(".close-button").addEventListener("click", closeModalForm)
+
   // Fecha o modal
   function closeModalForm() {
     let handdleButton = $(".open-modal-form");

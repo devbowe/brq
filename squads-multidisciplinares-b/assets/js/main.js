@@ -115,6 +115,9 @@ $(document).ready(() => {
     el.addClass("closed");
   }
 
+  document.querySelector(".open-modal-form").addEventListener("click", openModalForm)
+  document.querySelector(".close-button").addEventListener("click", closeModalForm)
+
   setTimeout(function () {
     // Phone Mask
     // jQuery Mask Plugin v1.7.7
