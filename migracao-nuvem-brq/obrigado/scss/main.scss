@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+
+  @media (max-width: 900px) {
+    font-size: 16px;
+  }
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.color-yellow {
+  color: #ed8b00;
+}
+.color-white {
+  color: white;
+}
+
+.bg-grey {
+  background: #24242a;
+}
+
+.title-primary {
+  font-family: "Bebas Neue", cursive;
+  font-size: 4rem;
+  line-height: 100%;
+  letter-spacing: 0.1rem;
+  margin: 0px;
+  text-transform: uppercase;
+
+  @media (max-width: 900px) {
+    font-size: 2.2rem;
+  }
+}
+
+.title-third {
+  font-size: 1.7rem;
+  line-height: 100%;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", cursive;
+  margin: 0px;
+
+  @media (max-width: 900px) {
+    font-size: 1.25rem;
+  }
+}
+
+p {
+  margin: 0.5rem 0rem 1rem;
+  font-size: 1rem;
+}
+
+.mx-auto {
+  margin: 0px auto;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.my-20 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0px 20px;
+  margin: 0px auto;
+}
+
+.header {
+  background: black;
+  text-align: center;
+  padding: 15px 0px;
+}
+
+.banner {
+  img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+footer {
+  background: #000000;
+  padding: 20px 0px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+
+  .redes-sociais {
+    display: flex;
+    gap: 30px;
+  }
+  .icon-brq {
+    min-width: 200px;
+    text-align: center;
+    margin: 0px auto;
+    img {
+      height: 50px;
+      width: auto;
+    }
+  }
+
+  .selos-validados {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin: 0px auto;
+  }
+}
+
+.block-agradecimento {
+  background: url("../img/banner-tp.jpg") top center/cover no-repeat;
+  min-height: calc(100vh - 218px);
+  padding: 100px 0px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  footer {
+    .container {
+      justify-content: center;
+    }
+  }
+}

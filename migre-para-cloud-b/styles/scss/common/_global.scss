@@ -1,0 +1,122 @@
+$colors: (
+    "clr-neutral-100": #ffffff,
+    "clr-neutral-200": #f5f5f5,
+    "clr-neutral-300": #f9f9f9,
+    "clr-neutral-500": #353535,
+    "clr-neutral-700": #21242d,
+    "clr-neutral-900": #15171b,
+
+    "clr-accent-yellow": #ed8b00,
+    "clr-accent-blue": #009cde,
+);
+
+:root {
+    @each $name, $value in $colors {
+        --#{$name}: #{$value};
+    }
+}
+
+:root {
+    --ff-primary: "Open Sans", sans-serif;
+    // --ff-secondary: "Dosis", sans-serif;
+    --ff-secondary: "Bebas Neue", cursive;
+    --ff-tp: "Bebas Neue", cursive;
+
+    --spacing: 4rem;
+
+    --clr-gradient-black: #181515, #878787;
+    --clr-gradient-blue: #009cde, #0085be;
+    --clr-gradient-yellow: #ed8b00, #ffb800;
+
+    @media screen and (min-width: 45em) {
+        --spacing: 5rem;
+    }
+
+    @media screen and (min-width: 70em) {
+        --spacing: 5.5rem;
+    }
+}
+
+html {
+    scroll-padding-top: 2rem;
+    font-size: 93.75%;
+
+    @media screen and (min-width: 45em) {
+        font-size: 100%;
+    }
+}
+
+h1,
+h3,
+h2 {
+    letter-spacing: 0.02em;
+    font-weight: 400;
+
+    strong {
+        font-weight: 400;
+    }
+}
+
+body {
+    font-family: var(--ff-primary);
+}
+
+.container {
+    width: min(90%, 77.25em);
+    margin-inline: auto;
+}
+
+.ff-primary {
+    font-family: var(--ff-primary);
+}
+
+.ff-secondary {
+    font-family: var(--ff-secondary);
+}
+
+.ff-tp {
+    font-family: var(--ff-tp);
+}
+
+.fw-bold {
+    font-weight: 700;
+}
+
+.spacing {
+    padding-block: var(--spacing);
+}
+
+.ff-secondary.fw-bold {
+    font-weight: 400;
+}
+
+.flow {
+    p + p {
+        margin-top: 1rem;
+    }
+}
+
+@each $name, $value in $colors {
+    .#{$name} {
+        color: #{$value};
+    }
+}
+
+::selection {
+    background-color: var(--clr-accent-yellow);
+    color: var(--clr-neutral-100);
+}
+
+::-webkit-scrollbar {
+    width: 0.75em;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--clr-accent-yellow);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--clr-neutral-100);
+    border: 2px solid var(--clr-accent-yellow);
+    border-radius: 10px;
+}

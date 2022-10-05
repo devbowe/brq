@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+$primary-color: #24242a;
+$secundary-color: #009cde;
+$third-color: #005fa3;
+$forth-color: #e8e8e8;
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+
+  @media (max-width: 900px) {
+    font-size: 16px;
+  }
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.title-primary {
+  font-family: "Bebas Neue", cursive;
+  font-size: 4rem;
+  line-height: 100%;
+  letter-spacing: 0.1rem;
+  margin: 0px;
+  text-transform: uppercase;
+  font-weight: 500;
+
+  @media (max-width: 900px) {
+    font-size: 2.2rem;
+  }
+}
+
+.color-white {
+  color: white;
+}
+
+.color-blue {
+  color: $secundary-color;
+}
+
+.text-center {
+  text-align: center;
+}
+
+p {
+  margin: 0.5rem 0rem 1rem;
+  font-size: 1rem;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.my-20 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+body {
+  background: url("../img/bg-agradecimento.png") center center/cover no-repeat;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0px 20px;
+  margin: 0px auto;
+}
+
+.header {
+  background: #24242a;
+  text-align: center;
+  padding: 15px 0px;
+}
+
+.block-agradecimento {
+  min-height: calc(100vh - 220px);
+  padding: 100px 0px;
+  display: flex;
+  align-items: center;
+}
+
+footer {
+  background: transparent;
+  padding: 20px 0px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+
+  .selos-validados {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    margin: 0px auto;
+  }
+}
+
+@media (max-width: 900px) {
+  footer {
+    .container {
+      justify-content: center;
+    }
+  }
+}

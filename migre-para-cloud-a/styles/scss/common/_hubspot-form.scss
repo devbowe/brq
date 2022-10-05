@@ -1,0 +1,94 @@
+.hs-form-field {
+    padding-bottom: 1.25rem;
+    padding-right: 1rem;
+
+    label {
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
+
+        span {
+            color: #222;
+        }
+    }
+}
+
+.form-columns-2 {
+    padding-bottom: 1rem;
+}
+
+.hs-error-msg {
+    color: rgb(219, 32, 32);
+    font-size: 0.8rem;
+    line-height: 1.2;
+    display: block;
+}
+
+.hs-form-booleancheckbox-display {
+    input {
+        position: relative;
+        top: 4px;
+    }
+
+    span {
+        font-size: 0.85rem;
+    }
+}
+
+.hs-richtext {
+    p {
+        font-size: 0.9rem !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+    }
+}
+
+.grecaptcha-badge {
+    display: none;
+}
+
+.hs-button {
+    cursor: pointer;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    color: var(--clr-neutral-100);
+    border-radius: 100vmax;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, var(--clr-gradient-yellow));
+    display: block;
+    max-width: max-content;
+    font-weight: 700;
+    font-family: var(--ff-primary);
+    text-align: center;
+    margin-inline: auto;
+    min-height: 40px;
+    display: grid;
+    place-items: center;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+        transition: filter 300ms linear;
+        will-change: filter;
+        filter: brightness(0.9);
+    }
+}
+.hs-dependent-field {
+    > div {
+        padding-bottom: 0;
+    }
+}
+
+select {
+    width: 100% !important;
+}
+
+.form-columns-2,
+.form-columns-1 {
+    max-width: unset !important;
+}
+
+input:focus,
+select:focus {
+    border-bottom: 1px solid var(--clr-accent-yellow) !important;
+}

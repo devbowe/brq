@@ -1,0 +1,169 @@
+.tp__hero {
+    background-image: url("../../public/images/hero-bg.png");
+    background-color: rgb(0 0 0 / 0.3);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: var(--clr-neutral-100);
+    min-height: 100vh;
+
+    @media (min-width: 70em) {
+        margin-bottom: 5rem;
+    }
+
+    &__container {
+        .fw-bold {
+            font-size: 1.125rem;
+        }
+
+        > img {
+            padding-bottom: var(--spacing);
+        }
+
+        p + p {
+            margin-top: 1.75rem;
+        }
+
+        p {
+            max-width: 60ch;
+        }
+
+        h1 {
+            font-size: clamp(2.35rem, 3.5vw, 3.25rem);
+            line-height: 1.2;
+            letter-spacing: 0.02em;
+            max-width: 25ch;
+            padding-bottom: 4rem;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            margin-top: 3rem;
+            position: relative;
+            font-size: 1.25rem;
+            flex-wrap: wrap;
+            margin-top: 8rem;
+
+            a {
+                width: 2rem;
+                animation: bounce 2000ms infinite;
+                margin-top: -10px;
+            }
+
+            &::before {
+                content: "";
+                background-color: var(--clr-accent-yellow);
+                width: 54px;
+                height: 3px;
+                display: block;
+                position: absolute;
+                top: -1rem;
+            }
+        }
+    }
+
+    @keyframes bounce {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(20px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+}
+
+.section-dark {
+    background-color: var(--clr-neutral-900);
+    color: var(--clr-neutral-100);
+}
+
+.tp-custom {
+    &__container {
+        display: grid;
+        grid-template-areas:
+            "image"
+            "content";
+        gap: 3rem;
+
+        .content {
+            grid-area: content;
+
+            h2 {
+                letter-spacing: 0.02em;
+                font-size: clamp(1.75rem, 3.5vw, 2rem);
+            }
+
+            p {
+                padding-block: 1.5rem;
+            }
+        }
+
+        .image {
+            grid-area: image;
+        }
+
+        @media screen and (min-width: 45em) {
+            grid-template-columns: 1fr 1fr;
+            align-items: start;
+
+            gap: 3rem;
+            grid-template-areas: "image content";
+
+            &.reverse {
+                grid-template-areas: "content image";
+            }
+        }
+    }
+
+    @media screen and (min-width: 70em) {
+        --spacing: 5rem;
+
+        &__container {
+            gap: 6rem;
+            align-items: center;
+
+            .image {
+                margin-top: -7rem;
+            }
+
+            h2 {
+                max-width: 30ch;
+
+                position: relative;
+                --side: 2rem;
+                --top: 15%;
+
+                &::before {
+                    content: "";
+                    width: 140px;
+                    height: 2px;
+                    background-color: var(--clr-accent-yellow);
+                    position: absolute;
+                    top: 1.5rem;
+                    left: -11rem;
+                }
+            }
+
+            &.reverse {
+                h2 {
+                    &::before {
+                        right: -88%;
+                        left: auto;
+                    }
+                }
+            }
+
+            &.space-xl {
+                margin-block: 8rem;
+            }
+        }
+    }
+}
